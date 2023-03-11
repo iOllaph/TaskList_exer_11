@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction:  column;
+    min-height: 100vh ;
+}
+
+header {
+
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+main {
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#task_list {
+    padding: 1rem;
+}
+
+#tasks .task {
+    display: flex;
+	justify-content: space-between;
+    padding: 1rem;
+	border-radius: 1rem;
+	margin: 20px;
+    background-color: beige;
+}
+    
+
+.select_action {
+    margin: 10px;
+}

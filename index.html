@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>EXERRCISE 10</title>
+  </head>
+  <body>
+    <header>
+      <h1>T A S K S _ L I S T</h1>
+
+      <form id="form">
+        <input type="text" id="task_input" placeholder="do something..." />
+        <input type="submit" value="add task" id="submit_task" />
+      </form>
+      <form id="select">
+        <select id="status" style="display: none">
+          <option value="remove">Remover Selecionados</option>
+          <option value="underline">Marcar como pronto Selecionados</option>
+        </select>
+      </form>
+    </header>
+    <main>
+      <section id="task_list">
+        <h2>T A S K S</h2>
+
+        <div id="tasks">
+          <!-- <div class="task">
+            <div class="content">
+              <input type="text" class="text" readonly />
+            </div>
+            <div class="action">
+              <input type="checkbox" id="checkbox" />
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="main.js"></script>
+</html>
