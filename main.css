@@ -41,3 +41,7 @@ main {
 .select_action {
     margin: 10px;
 }
+
+body {
+    background-color: black;
+}
