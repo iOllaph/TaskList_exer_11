@@ -22,9 +22,10 @@ form.addEventListener('submit' , (e) => {
 
     task_element.appendChild(content_element);
 
-    const input_element = document.createElement("input");
+    const input_element = document.createElement("span");
     input_element.type = "text";
-    input_element.value = task;
+    input_element.innerHTML = task;
+    
     input_element.setAttribute('readonly' , 'readonly');
 
     content_element.appendChild(input_element);
@@ -32,15 +33,68 @@ form.addEventListener('submit' , (e) => {
     const action = document.createElement("div");
     action.classList.add("action")
 
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
+    const check = document.createElement("input");
+    check.classList.add = "checkbox_check"
+    check.type = "checkbox";
 
-    action.appendChild(checkbox);
+    action.appendChild(check);
     task_element.appendChild(action);
 
     task_list.appendChild(task_element);
 
     input.value = ""
+
+    check.addEventListener('click', () => {
+
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        var values = []
+
+        checkboxes.forEach((checkbox)  => {
+        values.push(checkbox.value);
+        })
+
+        if (values.length >= 1 ) {
+
+            status.style.display = "block";
+
+        } else {
+            status.style.display = "none";
+        }
+        
+        status.selectedIndex = 0;
+
+        status.addEventListener('change' , function() {
+            
+            var value = status.value;
+            
+            
+            
+            if (value == "1") {
+                task_element.remove();
+                status.style.display = "none";
+                
+                
+
+            } else if (value == "2") {
+                
+                input_element.style.textDecoration = "line-through";
+                var clist = document.getElementsByTagName("input");
+                for (var i = 0; i < clist.length; ++i) {
+                     clist[i].checked = false;
+                 }
+                status.style.display = "none";
+
+            }
+            
+            
+            
+
+        }, false)
+    })
     
+
     
+
+    
+
 })

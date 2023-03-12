@@ -15,10 +15,12 @@
         <input type="text" id="task_input" placeholder="do something..." />
         <input type="submit" value="add task" id="submit_task" />
       </form>
+      
       <form id="select">
-        <select id="status" style="display: none">
-          <option value="remove">Remover Selecionados</option>
-          <option value="underline">Marcar como pronto Selecionados</option>
+        <select id="status" style="display: none" >
+          <option id="Select_option" value= "0" selected >Select Option</option>
+          <option id="remove_task" value="1">Remover Selecionados</option>
+          <option id="underline" value="2" >Marcar como pronto Selecionados</option>
         </select>
       </form>
     </header>
@@ -38,7 +40,6 @@
         </div>
       </section>
     </main>
-    
   </body>
   <script src="main.js"></script>
 </html>
